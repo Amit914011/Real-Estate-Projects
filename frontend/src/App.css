@@ -1,0 +1,45 @@
+.submenu{
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    padding: 0 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.submenu .link{
+    display: block;
+    line-height: 50px;
+    border-bottom: 1px solid gainsboro;
+}
+.submenu .link:hover{
+    color: rgb(230, 139, 3);
+}
+.menu .link:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:1025px) {
+    .menu .link:hover .submenu{
+        visibility: hidden;
+        opacity: 0;
+    }
+    .submenu{
+        background-color: indigo;
+        width: 100%;
+        margin-top: 3px;
+    }
+
+    #show{
+        position: static;
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu .link:hover{
+        color: orange;
+    }
+    .menu a:hover{
+        color: orange;
+    }
+}
